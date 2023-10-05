@@ -94,32 +94,24 @@ public class ExcelUtils {
 			
 			
 			
-			while(true)
-			{
-				System.out.println("Choose the Option : ");
-				System.out.println("\t1) Who has worked for 7 consecutive days\n"
-						+ "	2) Who have less than 10 hours of time between shifts but greater than 1 hour\n\t"
-						+ "3) Who has worked for more than 14 hours in a single shift");
+			
 				
-				choice = sc.nextInt();
-				if(choice == 1)
-				{
-					consecutivedays(employees);
-				}
-				else if(choice == 2)
-				{
-					differencebetsheefts(employees);
-				}
-				else if(choice == 3)
-				{
-					forteenhours(employees);
-				}
-				
-				else
-				{
-					System.out.println("wrong input");
-				}
-			}
+				//System.out.println("\n\n\t1) Who has worked for 7 consecutive days\n");
+			System.out.println("1) Workers who has worked for 7 consecutive days are : ");
+			System.out.println("-------------------------------------------------------------------------------");
+				consecutivedays(employees);
+				System.out.println("-------------------------------------------------------------------------------");
+				//System.out.println("\n\n\t2) Who have less than 10 hours of time between shifts but greater than 1 hour\n\t");
+				System.out.println("2) Workers  who have less than 10 hours of time between shifts but greater than 1 hour:  ");
+				System.out.println("-------------------------------------------------------------------------------");
+				differencebetsheefts(employees);
+				System.out.println("-------------------------------------------------------------------------------");
+				//System.out.println("\n\n\t3) Who has worked for more than 14 hours in a single shift\n");
+				System.out.println("3) Workers Who has worked for more than 14 hours in a single shift : ");
+				System.out.println("-------------------------------------------------------------------------------");
+				forteenhours(employees);
+				System.out.println("-------------------------------------------------------------------------------");
+			
 			
 			
 		}
@@ -132,8 +124,7 @@ public class ExcelUtils {
 
 		public static void consecutivedays(List<Employee> employees)
 		{
-			System.out.println("Workers who has worked for 7 consecutive days are : ");
-			System.out.println("-------------------------------------------------------------------------------");
+			
 			
 			
 			int size =employees.size();
@@ -168,8 +159,7 @@ public class ExcelUtils {
 		
 		public static void differencebetsheefts(List<Employee> employees) throws ParseException 
 		{
-			System.out.println("Workers  who have less than 10 hours of time between shifts but greater than 1 hour:  ");
-			System.out.println("-------------------------------------------------------------------------------");
+			
 			int c=2;
 			int size =employees.size();
 			for(int i = 2; i<size-11;i++)
@@ -200,8 +190,7 @@ public class ExcelUtils {
 		
 		public static void forteenhours(List<Employee> employees) throws ParseException
 		{
-			System.out.println("Workers Who has worked for more than 14 hours in a single shift : ");
-			System.out.println("-------------------------------------------------------------------------------");
+			
 			int c=2;
 			int size =employees.size();
 			for(int i = 2; i<size-11;i++)
